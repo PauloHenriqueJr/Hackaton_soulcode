@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const credentials = require('./credentials.json');
 const router = require('./routers/campaign-router')
 const app = express();
-const porta = 3000
+const porta = process.env.porta || 8000
 
 //mongoose.connect(credentials.db.mongoDB.host, { useNewUrlParser: true, useUnifiedTopology: true });
 
