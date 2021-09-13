@@ -1,0 +1,69 @@
+/*** 
+=============================================
+    Custom footer
+=============================================
+***/
+
+.footer-content {
+    background-color: #c93936;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+}
+
+.footer-content ul li {
+    list-style: none;
+}
+
+#logofooter {
+    margin-left: 3%;
+    width: 21%;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials a {
+    color: white;
+}
+
+.socials img {
+    margin-top: 40%;
+}
+
+
+.contact img {
+    width: 10%;
+    height: 8%;
+    padding: 2%;
+
+}
+
+.contact a {
+    margin-top: 10%;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+/*** 
+=============================================
+    Responsive CSS
+=============================================
+***/
+
+@media screen and (max-width: 720px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+}

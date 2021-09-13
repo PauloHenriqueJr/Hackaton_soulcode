@@ -1,0 +1,76 @@
+<%- include('../partials/systemHeader'); %>
+
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <article class="row mt-5">
+                    <section class="col-6">
+                        <h1>List of items</h1>
+                    </section>
+                    <form class="form col-6 p-0  text-right" action="/system/addItem" method="POST">
+                        <button type="submit" class="btn btn-primary form-group col-5">Add new item</button>
+                    </form>
+                </article>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-left align-middle">
+                                Name
+                            </th>
+                            <th class="text-center align-middle">
+                                E-mail
+                            </th>
+                            <th class="text-center align-middle">
+                                Phone
+                            </th>
+                            <th class="text-center align-middle">
+                                Options
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <% if (items.length==0) { %>
+                            <div class="alert alert-warning"> Não existem dados cadastrados.</div>
+
+                            <% } else {%>
+                                <% items.forEach(element=> { %>
+                                    <tr>
+                                        <td class="align-middle">
+                                            <%= element.name %>
+
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <%= element.email %>
+
+                                        </td>
+                                        <td class="text-center align-middle">
+                                            <%= element.phone %>
+
+                                        </td>
+                                        <td class="col-2">
+                                            <div class="row">
+                                                <form class="form col-6 p-0"
+                                                    action="/system/editItem/<%= element._id %>" method="POST">
+                                                    <button type="submit"
+                                                        class="btn btn-warning form-group col-11">Edit</button>
+                                                </form>
+                                                <form class="form col-6 p-0"
+                                                    action="/system/deleteItem/<%= element._id %>" method="POST">
+                                                    <button type="submit"
+                                                        class="btn btn-danger form-group col-11">Delete</button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+
+                                        <% }%>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <%- include('../partials/systemFooter'); %>

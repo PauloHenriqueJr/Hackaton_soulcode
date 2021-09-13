@@ -1,0 +1,91 @@
+/*** 
+  =============================================
+    Custom navbar
+  =============================================
+***/
+
+
+:root {
+    --cinza-claro: rgb(80, 80, 80);
+    --branco: #fff;
+    --vermelho-predominante: #FF5757;
+    --vermelho-escuro: #A83636;
+}
+
+.nav-link-button{
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link-menu {
+    position: relative;
+    margin: 0 1rem;
+    text-decoration: none;
+    padding-bottom: 3px;
+    color: #815656;
+}
+
+.nav-link-menu::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    border-radius: 80%;
+    background-color: #c93936;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+}
+
+.nav-link-menu:hover::after {
+    transform: scaleX(1.1);
+}
+
+.navbar-toggler {
+    width: 12%;
+    margin-right: 2%;
+    color: #c93936 !important;
+    background-color: #c93936 !important;
+}
+
+/*** 
+=============================================
+    Custom icons
+=============================================
+***/
+
+.fa-mouse-pointer {
+    margin: 5px;
+    color: #ffffff;
+}
+
+.fa-home,
+.fa-search,
+.fa-handshake,
+.fa-users,
+.fa-question {
+    margin: 5px;
+    color: #c93936;
+}
+
+/*** 
+=============================================
+    Responsive CSS
+=============================================
+***/
+
+@media screen and (max-width: 992px) {
+
+    .collapse,
+    .navbar {
+        background-color: white !important;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+    .navbar-expand-md>.container {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,42 @@
+<h2 class="display-4 d-flex justify-content-center small-capscol text-center mt-5 pt-5" id="register">Quero Fazer Parte!</h2>
+<div class="border-bottom-titles"></div>
+
+<div class="container py-4 px-3 d-md-flex flex-md-row form-home-page">
+  <div class="row m-0 align-items-center w-100">
+    <form class="form-container col-12 col-md-6" action="/interest/add" method="POST">
+      <div class="form-row">
+        <div class="form-group col-12">
+          <label for="name">Nome:</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Tefone:</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="(DDD) XXXX-XXXX ">
+      </div>
+
+      <div class="form-group mt-3">
+        <button class="btn btn-danger btn-form-submit mt-1" type="submit" onclick="formValidation(event)">
+          Enviar
+        </button>
+      </div>
+    </form>
+
+    <div class="col-12 col-md-6 mt-4 mt-md-0">
+
+      <iframe style="border-radius: 0.7vw;"
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d234105.96507714308!2d-46.483744291981786!3d-23.535893708944425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGRUPo%20petr%C3%B3polis%20MAPS!5e0!3m2!1spt-BR!2sbr!4v1631410989805!5m2!1spt-BR!2sbr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</div>
