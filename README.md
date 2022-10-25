@@ -1,4 +1,4 @@
-# Projeto Praia Limpa
+# Praia Limpa
 
 Projeto desenvolvido em um hackathon com a proposta de causa ESG para uma empresa.
 
